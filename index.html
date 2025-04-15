@@ -3,8 +3,8 @@
 <head>
     <title>Lin, Chien-Chen (Roga Lin)</title>
 
-    <link rel="shortcut icon" href="https://blog.roga.tw/wp-content/uploads/2022/07/android-chrome-512x512-1-16x16.png" />
-    <link rel="apple-touch-icon-precomposed" href="https://blog.roga.tw/wp-content/uploads/2022/07/android-chrome-512x512-1.png" />
+    <link rel="shortcut icon" href="https://image.roga.tw/u/5/klgMzO8V-m.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="https://image.roga.tw/u/6/38xtaFql-m.png" />
 
     <!-- GA Google Analytics @ https://m0n.co/ga -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162230-2"></script>
@@ -164,7 +164,28 @@
     </div>
 
     <hr>
-    <p class="center-text">2025 &copy; roga</p>
+
+    <p id="last-updated" class="center-text">placeholder</p>
+
+    <script>
+        // 取得原始的最後更新時間字串，並轉成 Date 物件
+        const lastModifiedRaw = new Date(document.lastModified);
+
+        // 自訂格式化成 YYYY-MM-DD H:i:s
+        const padZero = (n) => n.toString().padStart(2, '0');
+        const formattedDate =
+            lastModifiedRaw.getFullYear() + '-' +
+            padZero(lastModifiedRaw.getMonth() + 1) + '-' +
+            padZero(lastModifiedRaw.getDate()) + ' ' +
+            padZero(lastModifiedRaw.getHours()) + ':' +
+            padZero(lastModifiedRaw.getMinutes()) + ':' +
+            padZero(lastModifiedRaw.getSeconds());
+
+        // 顯示在段落中
+        document.getElementById("last-updated").textContent =
+            "Last Modified: " + formattedDate;
+    </script>
+    <p class="center-text">&copy; roga</p>
 
 </div>
 

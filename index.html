@@ -84,6 +84,16 @@
             margin: 20px;
             width: 200px; /* 可以根據需要調整圖片大小 */
         }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        } 
+        .footer-flex img {
+            vertical-align: middle;
+        }
+       
     </style>
 </head>
 <body>
@@ -165,27 +175,10 @@
 
     <hr>
 
-    <p id="last-updated" class="center-text">placeholder</p>
-
-    <script>
-        // 取得原始的最後更新時間字串，並轉成 Date 物件
-        const lastModifiedRaw = new Date(document.lastModified);
-
-        // 自訂格式化成 YYYY-MM-DD H:i:s
-        const padZero = (n) => n.toString().padStart(2, '0');
-        const formattedDate =
-            lastModifiedRaw.getFullYear() + '-' +
-            padZero(lastModifiedRaw.getMonth() + 1) + '-' +
-            padZero(lastModifiedRaw.getDate()) + ' ' +
-            padZero(lastModifiedRaw.getHours()) + ':' +
-            padZero(lastModifiedRaw.getMinutes()) + ':' +
-            padZero(lastModifiedRaw.getSeconds());
-
-        // 顯示在段落中
-        document.getElementById("last-updated").textContent =
-            "Last Modified: " + formattedDate;
-    </script>
-    <p class="center-text">&copy; roga</p>
+    <footer class="footer-flex">        
+        <a href="https://SiteStates.com" title="站長工具"><img src="https://SiteStates.com/show/image/1.jpg" border="0" /></a>
+        <span>&copy; roga.20250428</span>
+    </footer>
 
 </div>
 

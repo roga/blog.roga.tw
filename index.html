@@ -29,172 +29,428 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 引入 Google Material Design Lite -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/material/dist/material.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
+            color: #212529;
+            font-size: 0.8em;
         }
-        .main-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            color: darkcyan;
-            font-size: 1.2em;
-            margin-top: 20px;
-            font-weight: bolder;
-            font-style: italic;
-            border-bottom: 1px solid darkgoldenrod;
-        }
-        .section-content {
-            margin-bottom: 87px;
-            clear: both;
-        }
-        .card {
-            margin-top: 20px;
-        }
-        img {
-            margin: 10px;
-            border: 1px solid #222222;
+        .container {
+            max-width: 1024px;
         }
         a, a:visited {
-            color: darkslategray;
+            text-decoration: none;
+            color: #198754;
         }
-        p {
-            margin: 25px auto 25px auto;
+        a:hover {
+            text-decoration: underline;
         }
-        .center-text {
-            text-align: center;
+        .section-title {
+            color: #0d3434;
+            font-size: 1.6em;
+            margin: 1rem auto;
+            font-weight: bold;
+            font-style: italic;
+            border-bottom: 1px solid #383632;
         }
-        li {
-            margin-top: 10px;
+        .section-content {
+            margin-bottom: 3rem;
+        }
+        img {
+            margin: 0.5rem;
+            border: 1px solid #222;
         }
         #photo {
             float: right;
-            margin: 20px;
+            margin: 1rem;
             width: 200px;
         }
-        .footer-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        } 
-        .footer-flex img {
-            vertical-align: middle;
+        .lead {
+            font-size: 1.2em;
         }
-       
     </style>
 </head>
 <body>
 
-<div class="main-content">
+<div class="container py-4">
     <!-- Header -->
-    <div class="header">
-        <h1>Lin, Chien-Chen (Roga)</h1>
-        <p>knowledge is power, france is bacon.</p>
-    </div>
-
-    <!-- Contact -->
-    <div class="section-title">social links</div>
-    <div class="section-content">
-        <ul>
-            <li><a href="https://www.instagram.com/roga.lin/" target="_blank">Instagram (main)</a></li>
-            <li><a href="https://www.instagram.com/roga.photos/" target="_blank">Instagram (photography)</a></li>
-            <li><a href="https://www.linkedin.com/in/roga-lin/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/roga.lin" target="_blank">Facebook</a></li>
-            <li><a href="https://github.com/roga/" target="_blank">GitHub</a></li>
-            <li><a href="https://psnprofiles.com/rogatw" target="_blank">PSNProfiles</a></li>
-        </ul>
+    <div class="text-center mb-4">
+        <h2>Lin, Chien-Chen (roga)</h2>
+        <p class="lead text-nowrap fst-italic">just another cog in the machine.</p>
     </div>
 
     <!-- About the Author -->
     <div class="section-title">biography</div>
     <div class="section-content">
-        <p><img src="https://image.roga.tw/u/4/cdYqnySQ-s.jpg" id="photo"></p>
-        <p>&nbsp;</p>
-        <p>台灣人，現居新北市，喜愛垃圾食物、海產、熱炒和日本料理。從小到大的願望就是可以瘦一點，這樣就有理由吃更多的美食。</p>
-        <p>興趣包括基礎程度的攝影、乒乓球、自行車、摩托車、汽車、以及自助旅行。</p>
+        <div class="row g-4 mb-4">
+            <!-- 個人簡介卡片 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="d-flex justify-content-center">
+                        <img src="https://image.roga.tw/u/4/cdYqnySQ-s.jpg" class="card-img-top" alt="Roga Lin" style="width: 90%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">關於我</h5>
+                        <p class="card-text">台灣人，現居新北市，喜愛垃圾食物、海產、熱炒和日本料理。從小到大的願望就是可以瘦一點，這樣就有理由吃更多的美食。</p>
+                        <p class="card-text">興趣包括基礎程度的攝影、乒乓球、自行車、摩托車、汽車、以及自助旅行。</p>                        
+                        <h5 class="card-title">About me</h5>
+                        <p class="card-text">Taiwanese, currently residing in New Taipei City, enjoys junk food, seafood, hot pot, and Japanese cuisine. From a young age, my wish was to be able to lose weight, so I could eat more delicious food.</p>
+                        <p class="card-text">Interests include basic photography, table tennis, cycling, motorcycles, cars, and backpacking travel.</p>                        
+
+                    </div>
+                </div>
+        </div>
+
+        <!-- MotoGP 經歷卡片 -->
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="bi bi-trophy"></i> MotoGP
+                    </h5>
+                    <p class="card-text">自 2002 年起開始看世界摩托車錦標賽，除了定時收看轉播以外，也喜歡到現場觀戰，以下是我去過現場的賽事：</p>
+                    <p class="card-text">Since 2002, I have been watching the World Motorcycle Championship. In addition to regularly watching the broadcasts, I also enjoy attending the events. Here are the races I have attended:</p>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2006</span>
+                                    中國上海 (Shanghai International Circuit)
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2007</span>
+                                    中國上海 (Shanghai International Circuit)
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2014</span>
+                                    馬來西亞雪邦 (Sepang International Circuit)
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2015</span>
+                                    馬來西亞雪邦 (Sepang International Circuit)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2016</span>
+                                    義大利 Misano & 塔武力亞 (Misano World Circuit Marco Simoncelli)
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2017</span>
+                                    日本茂木 (Twin Ring Motegi)
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="badge bg-secondary me-2">2018</span>
+                                    英國銀石 (Silverstone Circuit)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="card-text mt-3">
+                        <small class="text-muted">此生最喜歡的賽車手是 加藤大治郎 (Kato Daijiro, 1976-2003) 和 瓦倫蒂諾·羅西 (Valentino Rossi)</small>
+                        <br>
+                        <small class="text-muted">My favorite MotoGP riders of all time are Kato Daijiro (1976-2003) and Valentino Rossi.</small>
+                    </p>
+                </div>
+            </div>
+
+            <!-- PS 遊戲成就卡片 -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="bi bi-controller"></i> PlayStation 白金獎盃
+                    </h5>
+                    <p class="card-text">在閒暇之餘，我也喜歡玩 Sony PlayStation®，以下是我的白金獎盃紀錄：</p>
+                    <p class="card-text">In my spare time, I also enjoy playing Sony PlayStation®. Here is my Platinum Trophy record:</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>遊戲名稱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>2016/02/25</td>
+                                    <td>人中之龍 極</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/03/04</td>
+                                    <td>inFamous Second Son</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/03/09</td>
+                                    <td>inFamous First Light</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/05/01</td>
+                                    <td>The Order 1886</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/06/29</td>
+                                    <td>血源詛咒 Bloodborne</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/04/04</td>
+                                    <td>人中之龍 0 誓約的場所</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/12/18</td>
+                                    <td>人中之龍 6 生命詩篇</td>
+                                </tr>
+                                <tr>
+                                    <td>2017/01/28</td>
+                                    <td>黑暗靈魂 III</td>
+                                </tr>
+                                <tr>
+                                    <td>2017/02/01</td>
+                                    <td>方根書簡</td>
+                                </tr>
+                                <tr>
+                                    <td>2017/05/06</td>
+                                    <td>仁王</td>
+                                </tr>
+                                <tr>
+                                    <td>2018/01/01</td>
+                                    <td>人中之龍 極2</td>
+                                </tr>
+                                <tr>
+                                    <td>2020/01/25</td>
+                                    <td>人中之龍 7 光與闇的去向</td>
+                                </tr>
+                                <tr>
+                                    <td>2020/02/16</td>
+                                    <td>死亡擱淺</td>
+                                </tr>
+                                <tr>
+                                    <td>2022/03/11</td>
+                                    <td>艾爾登法環</td>
+                                </tr>
+                                <tr>
+                                    <td>2023/12/31</td>
+                                    <td>人中之龍 7 外傳 英雄無名</td>
+                                </tr>
+                                <tr>
+                                    <td>2024/02/18</td>
+                                    <td>人中之龍 8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
+    <!-- Contact -->
+    <div class="section-title">social links</div>
     <div class="section-content">
-        <hr>
-        <p>自 2002 年起開始看世界摩托車錦標賽，除了定時收看轉播以外，也喜歡到現場觀戰，以下是我去過現場的賽事：</p>
-        <ul>
-            <li>2006 中國上海 (Shanghai International Circuit)</li>
-            <li>2007 中國上海 (Shanghai International Circuit)</li>
-            <li>2014 馬來西亞雪邦 (Sepang International Circuit)</li>
-            <li>2015 馬來西亞雪邦 (Sepang International Circuit)</li>
-            <li>2016 義大利 Misano (Misano World Circuit Marco Simoncelli) & 塔武力亞(Tavullia)</li>
-            <li>2017 日本茂木 (Twin Ring Motegi)</li>
-            <li>2018 英國銀石 (Silverstone Circuit)</li>
+        <div class="card shadow-sm">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <i class="bi bi-instagram me-2" style="color:#E4405F;"></i>
+                    <a href="https://www.instagram.com/roga.lin/" target="_blank" class="link-dark">Instagram (main)</a>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-instagram me-2" style="color:#E4405F;"></i>
+                    <a href="https://www.instagram.com/roga.photos/" target="_blank" class="link-dark">Instagram (photography)</a>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-linkedin me-2" style="color:#0A66C2;"></i>
+                    <a href="https://www.linkedin.com/in/roga-lin/" target="_blank" class="link-dark">LinkedIn</a>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-facebook me-2" style="color:#1877F3;"></i>
+                    <a href="https://www.facebook.com/roga.lin" target="_blank" class="link-dark">Facebook</a>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-controller me-2" style="color:#212529;"></i>
+                    <a href="https://psnprofiles.com/rogatw" target="_blank" class="link-dark">PSNProfiles</a>
+                </li>
         </ul>
-        <p>此生最喜歡的賽車手是 加藤大治郎 (Kato Daijiro, 1976-2003) 和 瓦倫蒂諾·羅西 (Valentino Rossi) 。</p>
-        <p>另外在閒暇之餘，我也喜歡玩 Sony PlayStation®，並取得以下 PS 遊戲的白金獎盃紀錄：</p>
-        <ul>
-            <li>2016/02/25 – 人中之龍 極</li>
-            <li>2016/03/04 – inFamous Second Son</li>
-            <li>2016/03/09 – inFamous First Light</li>
-            <li>2016/05/01 – The Order 1886</li>
-            <li>2016/06/29 – 血源詛咒 Bloodborne</li>
-            <li>2016/04/04 – 人中之龍 0 誓約的場所</li>
-            <li>2016/12/18 – 人中之龍 6 生命詩篇</li>
-            <li>2017/01/28 – 黑暗靈魂 III</li>
-            <li>2017/02/01 – 方根書簡</li>
-            <li>2017/05/06 – 仁王</li>
-            <li>2018/01/01 – 人中之龍 極2</li>
-            <li>2020/01/25 – 人中之龍 7 光與闇的去向</li>
-            <li>2020/02/16 – 死亡擱淺</li>
-            <li>2022/03/11 – 艾爾登法環</li>
-            <li>2023/12/31 – 人中之龍 7 外傳 英雄無名</li>
-            <li>2024/02/18 – 人中之龍 8</li>
-        </ul>
+        </div>
     </div>
+    
 
-    <!-- Game Achievements -->
-    <div class="section-title">activities</div>
+    <div class="section-title">weekend warrior projects</div>
     <div class="section-content">
-        <ul>
-            <li>2008.10.05 臺東之美鐵人三項賽 51.5 – 成績 03:19:13</li>
-            <li>2022.12.04 台東戀戀 197 100K 挑戰組 – 成績 04:16:23</li>
-            <li>2023.03.05 輪霸西濱 200K – 成績 11:07:42</li>
-            <li>2023.07.01 西進武嶺 (僅至翠峰, 未完成) – 成績 03:41:03</li>
-            <li>2023.11.04 一日北高 – 成績 20:42:09</li>
-            <li>2023.12.03 台東戀戀 197 130K 競賽組 – 成績 04:27:31</li>
-        </ul>
-    </div>
-
-    <div class="section-title">side projects</div>
-    <div class="section-content">
-        <ul>
-            <li><a href="https://go.roga.tw">go.roga.tw</a> - my personal short URL service.</li>
-            <li><a href="https://image.roga.tw">image.roga.tw</a> - my personal album.</li>
-            <li><a href="https://topdn.net">TopDN.net</a> - a free DNS hosting service that lets users manage multiple domain zones with fast updates and high availability.</li>
-            <li><a href="https://sitestates.com">SiteStates.com</a> - a free web analytics tool that provides customizable visitor stats through an easy-to-install code snippet.</li>
-            <li><a href="https://zzb.bz">ZZB.BZ</a> - a free URL shortener with custom aliases, password protection, hit tracking, and ad-free redirection.</li>
-        </ul>
+        <div class="row g-2">
+            <!-- 2025 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2025</span>
+                            <i class="bi bi-calendar2-week" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/timeline-planner" class="text-decoration-none">timeline-planner</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A simple timeline planner.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2025</span>
+                            <i class="bi bi-chat-dots" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/chatgpt-prompt-lens" class="text-decoration-none">chatgpt-prompt-lens</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A Chrome Extension for summarizing and navigating your ChatGPT prompts.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2025</span>
+                            <i class="bi bi-cup-hot" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/awkward-vending-machine-helper" class="text-decoration-none">awkward-vending-machine-helper</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">
+                            Rebuild this helper in JavaScript and Python, this project is a tribute to
+                            <a href="https://github.com/happydenn/linereats">linereats</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2018 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2018</span>
+                            <i class="bi bi-search" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/RaidBattleDetector" class="text-decoration-none">RaidBattleDetector</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A tool to detect the Pokemon Raid Battles.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2017 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2017</span>
+                            <i class="bi bi-link-45deg" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://go.roga.tw" class="text-decoration-none">go.roga.tw</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">My personal URL shortener service.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2016 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2016</span>
+                            <i class="bi bi-image" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/imgupup" class="text-decoration-none" target="_blank">imgupup</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">
+                            A simple image uploader, see
+                            <a href="https://image.roga.tw/albums/collection/demo">demo album</a>
+                            for a demonstration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2011 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2011</span>
+                            <i class="bi bi-file-earmark-text" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://github.com/roga/convert2utf8" class="text-decoration-none">convert2utf8</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A simple tool to convert text files to UTF-8 encoding file.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2009 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2009</span>
+                            <i class="bi bi-link" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://zzb.bz" class="text-decoration-none">ZZB.BZ</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A free URL shortener with custom aliases, password protection, hit tracking, and ad-free redirection.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2007 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2007</span>
+                            <i class="bi bi-bar-chart" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://sitestates.com" class="text-decoration-none">SiteStates.com</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A free web analytics tool that provides customizable visitor stats through an easy-to-install code snippet.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2006 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm">
+                    <div class="px-2 py-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-secondary" style="font-size:0.8em;">2006</span>
+                            <i class="bi bi-globe" style="font-size:1.1em;"></i>
+                        </div>
+                        <div style="font-size:1em;font-weight:500;">
+                            <a href="https://topdn.net" class="text-decoration-none">TopDN.net</a>
+                        </div>
+                        <div class="text-muted" style="font-size:0.85em;">A free DNS hosting service that lets users manage multiple domain zones with fast updates and high availability.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <hr>
 
-    <footer class="footer-flex">        
-        <a href="https://SiteStates.com" title="站長工具"><img src="https://SiteStates.com/show/image/1.jpg" border="0" /></a>
-        <span>&copy; roga.20250428</span>
+    <footer class="d-flex justify-content-between align-items-center py-3">
+        <a href="https://SiteStates.com" title="站長工具"><img src="https://SiteStates.com/show/image/1.jpg" style="border: none;" /></a>
+        <span>&copy; roga.20250511</span>
     </footer>
 
 </div>
 
-
-<!-- Material Design Lite JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/@material/material/dist/material.min.js"></script>
 </body>
 </html>

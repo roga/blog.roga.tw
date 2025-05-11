@@ -20,5 +20,5 @@ DirectoryIndex index.html
 
 # Custom 404 error page (served from the same directory as this .htaccess)
 <IfModule mod_negotiation.c>
-  ErrorDocument 404 404.html
+  ErrorDocument 404 /404.html
 </IfModule>

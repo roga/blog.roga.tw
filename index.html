@@ -73,6 +73,14 @@
         .lead {
             font-size: 1.2em;
         }
+        .blink {
+            animation: blinker 1.5s step-start infinite;
+        }
+        @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+}
     </style>
 </head>
 <body>
@@ -85,7 +93,7 @@
     </div>
 
     <!-- About the Author -->
-    <div class="section-title">biography</div>
+    <div class="section-title"><i class="bi bi-journal-bookmark-fill"></i> Me, In a Nutshell</div>
     <div class="section-content">
         <div class="row g-4 mb-4">
             <!-- 個人簡介卡片 -->
@@ -95,10 +103,11 @@
                         <img src="https://image.roga.tw/u/4/cdYqnySQ-s.jpg" class="card-img-top" alt="Roga Lin" style="width: 90%; object-fit: cover;">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">關於我</h5>
+                        <h5 class="card-title">
+                            <i class="bi bi-award"></i> About Me
+                        </h5>
                         <p class="card-text">台灣人，現居新北市，喜愛垃圾食物、海產、熱炒和日本料理。從小到大的願望就是可以瘦一點，這樣就有理由吃更多的美食。</p>
                         <p class="card-text">興趣包括基礎程度的攝影、乒乓球、自行車、摩托車、汽車、以及自助旅行。</p>                        
-                        <h5 class="card-title">About me</h5>
                         <p class="card-text">Taiwanese, currently residing in New Taipei City, enjoys junk food, seafood, hot pot, and Japanese cuisine. From a young age, my wish was to be able to lose weight, so I could eat more delicious food.</p>
                         <p class="card-text">Interests include basic photography, table tennis, cycling, motorcycles, cars, and backpacking travel.</p>                        
 
@@ -106,8 +115,8 @@
                 </div>
         </div>
 
-        <!-- MotoGP 經歷卡片 -->
         <div class="col-md-8">
+            <!-- MotoGP -->
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -161,11 +170,11 @@
                 </div>
             </div>
 
-            <!-- PS 遊戲成就卡片 -->
+            <!-- PS  -->
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <i class="bi bi-controller"></i> PlayStation 白金獎盃
+                        <i class="bi bi-controller"></i> PlayStation
                     </h5>
                     <p class="card-text">在閒暇之餘，我也喜歡玩 Sony PlayStation®，以下是我的白金獎盃紀錄：</p>
                     <p class="card-text">In my spare time, I also enjoy playing Sony PlayStation®. Here is my Platinum Trophy record:</p>
@@ -253,7 +262,7 @@
     </div>
 
     <!-- Contact -->
-    <div class="section-title">social links</div>
+    <div class="section-title"><i class="bi bi-battery blink"></i> Social Energy: 3%</div>
     <div class="section-content">
         <div class="card shadow-sm">
             <ul class="list-group list-group-flush">
@@ -282,7 +291,7 @@
     </div>
     
 
-    <div class="section-title">weekend warrior projects</div>
+    <div class="section-title"><i class="bi bi-rocket-takeoff"></i> Weekend Warrior Projects</div>
     <div class="section-content">
         <div class="row g-2">
             <!-- 2025 -->
@@ -442,6 +451,20 @@
         </div>
     </div>
 
+    <div class="section-title"><i class="bi bi-bicycle"></i> Just be there to make up the numbers</div>
+    <div class="section-content">
+        <div class="card shadow-sm">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">2008.10.05 臺東之美鐵人三項賽 51.5 – 成績 <span class="badge bg-secondary">03:19:13</span></li>
+                <li class="list-group-item">2022.12.04 台東戀戀 197 100K 挑戰組 – 成績 <span class="badge bg-secondary">04:16:23</span></li>
+                <li class="list-group-item">2023.03.05 輪霸西濱 200K – 成績 <span class="badge bg-secondary">11:07:42</span></li>
+                <li class="list-group-item">2023.07.01 西進武嶺 (僅至翠峰, 未完成) – 成績 <span class="badge bg-secondary">03:41:03</span></li>
+                <li class="list-group-item">2023.11.04 一日北高 – 成績 <span class="badge bg-secondary">20:42:09</span></li>
+                <li class="list-group-item">2023.12.03 台東戀戀 197 130K 競賽組 – 成績 <span class="badge bg-secondary">04:27:31</span></li>
+                <li class="list-group-item">2025.04.20 輪霸西濱 100K – 成績 <span class="badge bg-secondary">06:19:47</span></li>
+            </ul>
+        </div>
+    </div>
     <hr>
 
     <footer class="d-flex justify-content-between align-items-center py-3">

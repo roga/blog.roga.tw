@@ -1,12 +1,24 @@
-RewriteEngine On
+# Enable mod_rewrite only if it's available
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-DirectoryIndex index.html
-
-Options -Indexes
-
-RewriteRule ^\.git - [F,L]
-
-<FilesMatch "^(\.env|\.ht|\.git)">
-    Require all denied
+  # Block access to any path starting with .git
+  RewriteRule ^\.git - [F,L]
+</IfModule>
+# Deny access to sensitive files
+<FilesMatch "^(\.env|\.htaccess|\.htpasswd|\.git)">
+  Require all denied
 </FilesMatch>
 
+# Set the default index file
+DirectoryIndex index.html
+
+# Disable directory listing if mod_autoindex is available
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+# Custom 404 error page (served from the same directory as this .htaccess)
+<IfModule mod_negotiation.c>
+  ErrorDocument 404 404.html
+</IfModule>
